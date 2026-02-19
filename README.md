@@ -1,36 +1,104 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Nirbhik Datta — Close-Up Card Magician
 
-## Getting Started
+A modern, minimal website for Nirbhik Datta built with **Next.js 16**, **TypeScript**, **Tailwind CSS 4**, and **Framer Motion**.
 
-First, run the development server:
+## Quick Start
 
 ```bash
+# Install dependencies
+npm install
+
+# Start development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Build for production
+npm run build
+
+# Start production server
+npm run start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+src/
+  app/
+    layout.tsx          # Root layout (fonts, header, footer, grain overlay)
+    page.tsx            # Home page
+    globals.css         # Tailwind theme + global styles
+    about/page.tsx      # About page
+    performances/page.tsx # Performances gallery
+    services/page.tsx   # Services detail page
+    contact/page.tsx    # Contact form page
+    press/page.tsx      # Press kit page
+    api/contact/route.ts # Contact form API handler
+  components/
+    Header.tsx          # Sticky header with nav
+    Footer.tsx          # Site footer
+    MobileMenu.tsx      # Full-screen mobile nav
+    PageTransition.tsx  # Framer Motion page wrapper
+    VideoCard.tsx       # Video thumbnail card
+    ServiceCard.tsx     # Service overview card
+    TestimonialStrip.tsx # Testimonial grid
+    ContactForm.tsx     # Contact form with validation
+    SectionHeading.tsx  # Reusable section heading
+    GrainOverlay.tsx    # Subtle grain texture overlay
+    icons/              # SVG pip icons (Spade, Heart, Diamond, Club, Deck)
+  content/
+    site.ts             # ALL editable content lives here
+```
 
-## Learn More
+## Editing Content
 
-To learn more about Next.js, take a look at the following resources:
+All site content is managed from a single file:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+src/content/site.ts
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+This includes:
 
-## Deploy on Vercel
+- **name, tagline, bios** — identity and copy
+- **social links** — Instagram, YouTube, WhatsApp, email
+- **services** — title, description, audience, duration, inclusions, requirements
+- **testimonials** — quote, author, role
+- **videos** — title, category, description, YouTube URL, thumbnail
+- **press** — short bio, tech rider bullet points
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Edit this file to update all content across the site. No database or CMS needed.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Tech Stack
+
+| Technology     | Purpose                    |
+| -------------- | -------------------------- |
+| Next.js 16     | React framework (App Router) |
+| TypeScript     | Type safety                |
+| Tailwind CSS 4 | Utility-first styling      |
+| Framer Motion  | Subtle animations          |
+| next/font      | Google Fonts (Sora + Inter)|
+
+## Design System
+
+- **Palette:** near-black (#0a0a0b) / charcoal / off-white with cool silver accent (#a8b4c0)
+- **Typography:** Sora (headings), Inter (body)
+- **Motifs:** hairline borders, subtle grain overlay, pip icons used sparingly
+- **Animation:** minimal — fade/slide on entry, subtle hover lifts
+
+## Deploy to Vercel
+
+1. Push this repo to GitHub
+2. Go to [vercel.com/new](https://vercel.com/new)
+3. Import your repository
+4. Click **Deploy** — no environment variables needed
+
+The site will build and deploy automatically. Vercel will also set up preview deployments for pull requests.
+
+## Contact Form
+
+The contact form submits to `/api/contact`, which logs the payload to the server console and returns a success JSON response. To connect it to a real email service (e.g., Resend, SendGrid), update `src/app/api/contact/route.ts`.
+
+## License
+
+Private project. All rights reserved.

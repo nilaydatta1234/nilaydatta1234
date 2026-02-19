@@ -1,0 +1,6 @@
+<svg width="640" height="360" viewBox="0 0 640 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="640" height="360" fill="#161618"/>
+  <rect x="0.5" y="0.5" width="639" height="359" stroke="rgba(255,255,255,0.08)"/>
+  <path d="M296 156L344 180L296 204V156Z" fill="rgba(168,180,192,0.3)" stroke="rgba(168,180,192,0.5)" stroke-width="1"/>
+  <text x="320" y="240" text-anchor="middle" fill="rgba(136,136,146,0.6)" font-family="Inter, sans-serif" font-size="13">Video Placeholder</text>
+</svg>

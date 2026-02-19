@@ -1,0 +1,11 @@
+<svg width="600" height="600" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="600" fill="#161618"/>
+  <rect x="1" y="1" width="598" height="598" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <!-- Spade icon -->
+  <g transform="translate(300, 260)" fill="#888892" opacity="0.4">
+    <path d="M0-60C0-60-50 0-50 30C-50 55-30 65 0 45C30 65 50 55 50 30C50 0 0-60 0-60Z"/>
+    <rect x="-6" y="35" width="12" height="30" rx="2"/>
+    <path d="M-20 60C-20 60-10 45 0 45C10 45 20 60 20 60Z"/>
+  </g>
+  <text x="300" y="340" text-anchor="middle" fill="#888892" font-family="system-ui, sans-serif" font-size="14" opacity="0.5">Product Image</text>
+</svg>
